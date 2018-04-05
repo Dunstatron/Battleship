@@ -6,7 +6,7 @@ Public Module GameResources
     Private Sub LoadFonts()
         NewFont("ArialLarge", "arial.ttf", 80)
         NewFont("Courier", "cour.ttf", 14)
-        NewFont("CourierSmall", "cour.ttf", 8)
+        NewFont("CourierSmall", "cour.attf", 8)
         NewFont("Menu", "ffaccess.ttf", 8)
     End Sub
 
