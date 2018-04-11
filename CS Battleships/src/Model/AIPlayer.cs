@@ -105,7 +105,7 @@ public abstract class AIPlayer : Player
     /// <param name="column">output the column for the next shot</param>
     protected abstract void GenerateCoords(ref int row, ref int column);
 
-    protected abstract ProcessShot(int row, int col, AttackResult result);
+    protected abstract void ProcessShot(int row, int col, AttackResult result);
 
     /// <summary>
     /// the AI takes its attacks until its go is over
