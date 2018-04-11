@@ -14,7 +14,7 @@ namespace MyGame
             ShowSwinGameSplashScreen();
             
             //Run the game loop
-            while(false == WindowCloseRequested())
+            while(!WindowCloseRequested())
             {
                 //Fetch the next batch of UI interaction
                 ProcessEvents();

@@ -3,143 +3,146 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame; // requires mcs version 4+, 
 // using SwinGameSDK.SwinGame; // requires mcs version 4+, 
 
-/// <summary>
-/// The AIPlayer is a type of player. It can readonly deploy ships, it also has the
-/// functionality to generate coordinates and shoot at tiles.
-/// </summary>
-public abstract class AIPlayer : Player
+namespace Battleship
 {
-    
     /// <summary>
-    /// Location can store the location of the last hit made by an
-    /// AI Player. the use of which determiens the difficulty. 
+    /// The AIPlayer is a type of player. It can readonly deploy ships, it also has the
+    /// functionality to generate coordinates and shoot at tiles.
     /// </summary>
-
-    protected class Location
+    public abstract class AIPlayer : Player
     {
-        private int _Row;
-        private int _Column;
 
         /// <summary>
-        /// The row of the shot
+        /// Location can store the location of the last hit made by an
+        /// AI Player. the use of which determiens the difficulty. 
         /// </summary>
-        /// <value>The row of the shot</value>
-        /// <returns>The row of the shot</returns>
 
-        public int Row
+        protected class Location
         {
-            get
+            private int _Row;
+            private int _Column;
+
+            /// <summary>
+            /// The row of the shot
+            /// </summary>
+            /// <value>The row of the shot</value>
+            /// <returns>The row of the shot</returns>
+
+            public int Row
             {
-                return _Row;
+                get
+                {
+                    return _Row;
+                }
+                set
+                {
+                    _Row = value;
+                }
             }
-            set
+
+            /// <summary>
+            /// The column of the shot
+            /// </summary>
+            /// <value>The column of the shot</value>
+            /// <returns>The column of the shot</returns>
+
+            public int Column
             {
-                _Row = value;
+                get
+                {
+                    return _Column;
+                }
+                set
+                {
+                    _Column = Row;
+                }
             }
-        }
 
-        /// <summary>
-        /// The column of the shot
-        /// </summary>
-        /// <value>The column of the shot</value>
-        /// <returns>The column of the shot</returns>
-
-        public int Column
-        {
-            get
+            /// <summary>
+            /// Sets the last hit made to the last local variables
+            /// </summary>
+            /// <param name="row">the row of the location</param>
+            /// <param name="column">the column of the location</param>
+            /// 
+            public Location(int row, int column)
             {
-                return _Column;
+                _Column = column;
+                _Row = row;
             }
-            set
+
+            /// <summary>
+            /// Check if two locations are equal
+            /// </summary>
+            /// <param name="location1">location 1</param>
+            /// <param name="location2">locatoin 2</param>
+            /// <returns>true if location 1 and 2 are equal</returns>
+            public static bool operator ==(Location location1, Location location2)
             {
-                _Column = Row;
+                return ((location1 != null) && (location2 != null) && (location1.Row == location2.Row)
+                    && (location1.Column == location2.Column));
+            }
+
+            /// <summary>
+            /// Check if two locations are not equal
+            /// </summary>
+            /// <param name="location1">location 1</param>
+            /// <param name="location2">location 2</param>
+            /// <returns>true if locations are not equal</returns>
+            public static bool operator !=(Location location1, Location location2)
+            {
+                return ((location1 == null) || (location2 == null) || (location1.Row != location2.Row)
+                    || (location1.Column != location2.Column));
             }
         }
 
-        /// <summary>
-        /// Sets the last hit made to the last local variables
-        /// </summary>
-        /// <param name="row">the row of the location</param>
-        /// <param name="column">the column of the location</param>
-        /// 
-        public Location(int row, int column)
+        public AIPlayer(BattleShipsGame game) : base(game)
         {
-            _Column = column;
-            _Row = row;
+
         }
 
         /// <summary>
-        /// Check if two locations are equal
+        /// Generate a valid row, column to shoot at 
         /// </summary>
-        /// <param name="location1">location 1</param>
-        /// <param name="location2">locatoin 2</param>
-        /// <returns>true if location 1 and 2 are equal</returns>
-        public static bool operator ==(Location location1, Location location2)
-        {
-            return ((location1 != null) && (location2 != null) && (location1.Row == location2.Row)
-                && (location1.Column == location2.Column));
-        }
+        /// <param name="row">output the row for the next shot</param>
+        /// <param name="column">output the column for the next shot</param>
+        protected abstract void GenerateCoords(ref int row, ref int column);
+
+        protected abstract void ProcessShot(int row, int col, AttackResult result);
 
         /// <summary>
-        /// Check if two locations are not equal
+        /// the AI takes its attacks until its go is over
         /// </summary>
-        /// <param name="location1">location 1</param>
-        /// <param name="location2">location 2</param>
-        /// <returns>true if locations are not equal</returns>
-        public static bool operator !=(Location location1, Location location2)
+        /// <returns>the result of the last attack</returns>
+        public override AttackResult Attack()
         {
-            return ((location1 == null) || (location2 == null) || (location1.Row != location2.Row)
-                || (location1.Column != location2.Column));
-        }
-    }
+            AttackResult result;
+            int row = 0;
+            int column = 0;
 
-    public AIPlayer(BattleShipsGame game) : base(game)
-    {
-        
-    }
+            do // keep hitting until a miss
+            {
+                Delay();
 
-    /// <summary>
-    /// Generate a valid row, column to shoot at 
-    /// </summary>
-    /// <param name="row">output the row for the next shot</param>
-    /// <param name="column">output the column for the next shot</param>
-    protected abstract void GenerateCoords(ref int row, ref int column);
+                GenerateCoords(ref row, ref column); //generate coordinates for shot
+                result = _game.Shoot(row, column); // take shot
+                ProcessShot(row, column, result);
+            } while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && (!SwinGame.WindowCloseRequested());
 
-    protected abstract void ProcessShot(int row, int col, AttackResult result);
-
-    /// <summary>
-    /// the AI takes its attacks until its go is over
-    /// </summary>
-    /// <returns>the result of the last attack</returns>
-    public override AttackResult Attack()
-    {
-        AttackResult result;
-        int row = 0;
-        int column = 0;
-
-        do // keep hitting until a miss
-        {
-            Delay();
-
-            GenerateCoords(ref row, ref column); //generate coordinates for shot
-            result = _game.Shoot(row, column); // take shot
-            ProcessShot(row, column, result);
-        } while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && (!SwinGame.WindowCloseRequested());
-
-        return result;
-    }
-
-    private void Delay()
-    {
-        int i;
-        for(i = 0; i < 150; i++)
-        {
-            //Don't delay if window is closed
-            if (SwinGame.WindowCloseRequested()) return;
+            return result;
         }
 
-        SwinGame.Delay(5);
-        SwinGame.ProcessEvents();
-        SwinGame.RefreshScreen();
+        private void Delay()
+        {
+            int i;
+            for (i = 0; i < 150; i++)
+            {
+                //Don't delay if window is closed
+                if (SwinGame.WindowCloseRequested()) return;
+            }
+
+            SwinGame.Delay(5);
+            SwinGame.ProcessEvents();
+            SwinGame.RefreshScreen();
+        }
     }
 }

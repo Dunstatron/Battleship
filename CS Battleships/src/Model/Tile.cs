@@ -1,3 +1,4 @@
+using System;
 // '' <summary>
 // '' Tile knows its location on the grid, if it is a ship and if it has been 
 // '' shot before
@@ -131,10 +132,8 @@ public class Tile
         if ((false == Shot))
         {
             Shot = true;
-            if (_Ship)
+            if (_Ship != null)
             {
-                IsNot;
-                null;
                 _Ship.Hit();
             }
 

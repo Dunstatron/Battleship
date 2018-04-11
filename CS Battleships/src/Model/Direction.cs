@@ -1,16 +1,20 @@
-// '' <summary>
-// '' The direction the ship can be oriented.
-// '' </summary>
-public enum Direction
+
+namespace Battleship
 {
-
     // '' <summary>
-    // '' The ship is oriented left/right
+    // '' The direction the ship can be oriented.
     // '' </summary>
-    LeftRight,
+    public enum Direction
+    {
 
-    // '' <summary>
-    // '' The ship is oriented up/down
-    // '' </summary>
-    UpDown,
+        // '' <summary>
+        // '' The ship is oriented left/right
+        // '' </summary>
+        LeftRight,
+
+        // '' <summary>
+        // '' The ship is oriented up/down
+        // '' </summary>
+        UpDown,
+    }
 }
