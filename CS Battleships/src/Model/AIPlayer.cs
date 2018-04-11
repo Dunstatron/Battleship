@@ -62,7 +62,7 @@ public abstract class AIPlayer : Player
         /// <param name="row">the row of the location</param>
         /// <param name="column">the column of the location</param>
         /// 
-        public void Location(int row, int column)
+        public Location(int row, int column)
         {
             _Column = column;
             _Row = row;
