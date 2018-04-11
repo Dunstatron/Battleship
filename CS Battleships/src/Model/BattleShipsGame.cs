@@ -1,3 +1,4 @@
+using System;
 // '' <summary>
 // '' The BattleShipsGame controls a big part of the game. It will add the two players
 // '' to the game and make sure that both players ships are all deployed before starting the game.
@@ -17,6 +18,7 @@ public class BattleShipsGame
 
     public event AttackCompletedHandler AttackCompleted;
 
+    private Player[] _players = new Player[2];
     private int _playerIndex = 0;
 
     // '' <summary>
@@ -29,19 +31,19 @@ public class BattleShipsGame
     {
         get
         {
-            return _players(_playerIndex);
+            return _players[_playerIndex];
         }
     }
 
     public void AddDeployedPlayer(Player p)
     {
-        if ((_players(0) == null))
+        if ((_players[0] == null))
         {
-            _players(0) = p;
+            _players[0] = p;
         }
-        else if ((_players(1) == null))
+        else if ((_players[1] == null))
         {
-            _players(1) = p;
+            _players[1] = p;
             this.CompleteDeployment();
         }
         else
@@ -57,8 +59,8 @@ public class BattleShipsGame
     // '' </summary>
     private void CompleteDeployment()
     {
-        _players(0).Enemy = new SeaGridAdapter(_players(1).PlayerGrid);
-        _players(1).Enemy = new SeaGridAdapter(_players(0).PlayerGrid);
+        _players[0].Enemy = new SeaGridAdapter(_players[1].PlayerGrid);
+        _players[1].Enemy = new SeaGridAdapter(_players[0].PlayerGrid);
     }
 
     // '' <summary>
@@ -75,7 +77,7 @@ public class BattleShipsGame
                     % 2);
         newAttack = Player.Shoot(row, col);
         // Will exit the game when all players ships are destroyed
-        if (_players(otherPlayer).IsDestroyed)
+        if (_players[otherPlayer].IsDestroyed)
         {
             newAttack = new AttackResult(ResultOfAttack.GameOver, newAttack.Ship, newAttack.Text, row, col);
         }
