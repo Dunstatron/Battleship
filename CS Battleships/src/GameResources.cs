@@ -167,8 +167,7 @@ namespace Battleship
             Audio.PlaySoundEffect(_StartSound);
             SwinGame.Delay(200);
             int i;
-            for (i = 0; (i
-                        <= (ANI_CELL_COUNT - 1)); i++)
+            for (i = 0; (i <= (ANI_CELL_COUNT - 1)); i++)
             {
                 SwinGame.DrawBitmap(_Background, 0, 0);
                 SwinGame.Delay(20);
