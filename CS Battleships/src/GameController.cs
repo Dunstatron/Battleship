@@ -12,15 +12,15 @@ namespace Battleship
     public class GameController
     {
 
-        private BattleShipsGame _theGame;
+        private static BattleShipsGame _theGame;
 
-        private Player _human;
+        private static Player _human;
 
-        private AIPlayer _ai;
+        private static AIPlayer _ai;
 
         private Stack<GameState> _state = new Stack<GameState>();
 
-        private AIOption _aiSetting;
+        private static AIOption _aiSetting;
 
         // '' <summary>
         // '' Returns the current state of the game, indicating which screen is
@@ -36,7 +36,7 @@ namespace Battleship
             }
         }
 
-        public Player HumanPlayer
+        public static Player HumanPlayer
         {
             get
             {
@@ -44,7 +44,7 @@ namespace Battleship
             }
         }
 
-        public Player ComputerPlayer
+        public static Player ComputerPlayer
         {
             get
             {
@@ -88,8 +88,8 @@ namespace Battleship
                 }
                 _human = new Player(_theGame);
                 // AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
-                _ai.PlayerGrid.Changed += new System.EventHandler(this.GridChanged);
-                _theGame.AttackCompleted += new System.EventHandler(this.AttackCompleted);
+                _ai.PlayerGrid.Changed += new System.EventHandler(GridChanged);
+                _theGame.AttackCompleted += new System.EventHandler(AttackCompleted);
                 GameController.AddNewState(GameState.Deploying);
             }
 
