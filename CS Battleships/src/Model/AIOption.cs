@@ -1,7 +1,6 @@
 // '' <summary>
 // '' The different AI levels.
 // '' </summary>
-
 namespace Battleship
 {
     public enum AIOption

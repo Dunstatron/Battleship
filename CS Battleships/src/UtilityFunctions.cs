@@ -28,21 +28,21 @@ namespace Battleship
 
         public const int SHIP_GAP = 3;
 
-        private Color SMALL_SEA = SwinGame.RGBAColor(6, 60, 94, 255);
+        private static Color SMALL_SEA = SwinGame.RGBAColor(6, 60, 94, 255);
 
         private Color SMALL_SHIP = Color.Gray;
 
-        private Color SMALL_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
+        private static Color SMALL_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
 
-        private Color SMALL_HIT = SwinGame.RGBAColor(169, 24, 37, 255);
+        private static Color SMALL_HIT = SwinGame.RGBAColor(169, 24, 37, 255);
 
         private Color LARGE_SEA = SwinGame.RGBAColor(6, 60, 94, 255);
 
         private Color LARGE_SHIP = Color.Gray;
 
-        private Color LARGE_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
+        private static Color LARGE_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
 
-        private Color LARGE_HIT = SwinGame.RGBAColor(252, 2, 3, 255);
+        private static Color LARGE_HIT = SwinGame.RGBAColor(252, 2, 3, 255);
 
         private Color OUTLINE_COLOR = SwinGame.RGBAColor(5, 55, 88, 255);
 
@@ -50,7 +50,7 @@ namespace Battleship
 
         private Color SHIP_OUTLINE_COLOR = Color.White;
 
-        private Color MESSAGE_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
+        private static Color MESSAGE_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
 
         public const int ANIMATION_CELLS = 7;
 
@@ -148,7 +148,7 @@ namespace Battleship
                     Color fillColor;
                     bool draw;
                     draw = true;
-                    switch (grid.Item[row, col])
+                    switch (grid.Item(row, col))
                     {
                         case TileView.Ship:
                             draw = false;
@@ -173,10 +173,8 @@ namespace Battleship
                             {
                                 fillColor = LARGE_HIT;
                             }
-
                             break;
                         case TileView.Sea:
-                        case TileView.Ship:
                             if (small)
                             {
                                 fillColor = SMALL_SEA;
@@ -185,7 +183,6 @@ namespace Battleship
                             {
                                 draw = false;
                             }
-
                             break;
                     }
                     if (draw)
@@ -270,7 +267,7 @@ namespace Battleship
         // '' </summary>
         // '' <value>The message to display</value>
         // '' <returns>The message to display</returns>
-        public string Message
+        public static string Message
         {
             get
             {
