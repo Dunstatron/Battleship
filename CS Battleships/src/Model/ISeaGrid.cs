@@ -27,5 +27,15 @@ namespace Battleship
         // <param name="col">The column of the tile</param>
         // <returns>The result of the attack</returns>
         AttackResult HitTile(int row, int col);
+
+        int Width
+        {
+            get;
+        }
+
+        int Height
+        {
+            get;
+        }
     }
 }

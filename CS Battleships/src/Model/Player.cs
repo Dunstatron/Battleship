@@ -1,5 +1,7 @@
 using System.IO;
 using System.Collections.Generic;
+using System;
+using System.Collections;
 
 namespace Battleship
 {
@@ -103,21 +105,21 @@ namespace Battleship
             get
             {
                 // Check if all ships are destroyed... -1 for the none ship
-                return;
+                return _playerGrid.ShipsKilled == (Enum.GetValues(typeof(ShipName)).Length - 1);
             }
         }
 
-        public Ship Ship
+        public Ship Ship(ShipName name)
         {
-            get
-            {
+          //  get
+         //   {
                 if ((name == ShipName.None))
                 {
                     return null;
                 }
 
-                return _Ships.Item[name];
-            }
+            return _Ships[name];
+          //  }
         }
 
         public int Shots
@@ -164,7 +166,7 @@ namespace Battleship
 
         public IEnumerator<Ship> GetShipEnumerator()
         {
-            Ship[,] result;
+            Ship[] result = new Ship[_Ships.Values.Count];
             _Ships.Values.CopyTo(result, 0);
             List<Ship> lst = new List<Ship>();
             lst.AddRange(result);
@@ -178,7 +180,7 @@ namespace Battleship
         // '' <returns>A Ship enumerator</returns>
         public IEnumerator GetEnumerator()
         {
-            Ship[,] result;
+            Ship[] result = new Ship[_Ships.Values.Count];
             _Ships.Values.CopyTo(result, 0);
             List<Ship> lst = new List<Ship>();
             lst.AddRange(result);
@@ -231,9 +233,7 @@ namespace Battleship
                 }
 
                 placementSuccessful = false;
-                for (
-                ; !placementSuccessful;
-                )
+                while(!placementSuccessful)
                 {
                     int dir = _Random.Next(2);
                     int x = _Random.Next(0, 11);
@@ -253,9 +253,9 @@ namespace Battleship
                         PlayerGrid.MoveShip(x, y, shipToPlace, heading);
                         placementSuccessful = true;
                     }
-                    catch (System.Exception placementSuccessful)
+                    catch (System.Exception)
                     {
-                        false;
+                        placementSuccessful = false;
                     }
 
                 }

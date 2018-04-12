@@ -121,7 +121,7 @@ namespace Battleship
                         || ((column < 0)
                         || ((row >= EnemyGrid.Height)
                         || ((column >= EnemyGrid.Width)
-                        || (EnemyGrid.Item[row, column] != TileView.Sea)))));
+                        || (EnemyGrid.Item(row, column) != TileView.Sea)))));
             )
             {
                 _CurrentTarget = null;
@@ -352,7 +352,7 @@ namespace Battleship
 
         private void MoveToTopOfStack(int row, int column)
         {
-            Stack<Target> _NoMathc = new Stack<Target>();
+            Stack<Target> _NoMatch = new Stack<Target>();
             Stack<Target> _Match = new Stack<Target>();
             Target current;
             while ((_Targets.Count > 0))
@@ -387,7 +387,7 @@ namespace Battleship
         private void AddTarget(int row, int column)
         {
             if ((( row >= 0) && ((column >= 0) && ((row < EnemyGrid.Height) && ((column < EnemyGrid.Width) 
-                && (EnemyGrid.Item[row, column] == TileView.Sea))))))
+                && (EnemyGrid.Item(row, column) == TileView.Sea))))))
             {
                 _Targets.Push(new Target(new Location(row, column), _CurrentTarget.ShotAt)); 
             }
