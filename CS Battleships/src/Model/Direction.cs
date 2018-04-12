@@ -15,6 +15,6 @@ namespace Battleship
         // '' <summary>
         // '' The ship is oriented up/down
         // '' </summary>
-        UpDown,
+        UpDown
     }
 }

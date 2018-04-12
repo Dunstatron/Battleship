@@ -109,17 +109,17 @@ namespace Battleship
             }
         }
 
-        public Ship Ship(ShipName name)
+        public Ship this[ShipName name]
         {
-          //  get
-         //   {
+            get
+            {
                 if ((name == ShipName.None))
                 {
                     return null;
                 }
 
             return _Ships[name];
-          //  }
+            }
         }
 
         public int Shots
