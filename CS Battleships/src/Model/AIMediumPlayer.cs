@@ -57,8 +57,7 @@ namespace Battleship
                         this.TargetCoords(ref row, ref column);
                         break;
                     default:
-                        throw new ApplicationException("AI has gone in an imvalid state");
-                        break;
+                        throw new ApplicationException("AI has gone in an invalid state");
                 }
             }
 

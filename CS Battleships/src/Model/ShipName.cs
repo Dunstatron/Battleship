@@ -1,19 +1,22 @@
-// '' <summary>
-// '' The names of all of the ships in the gam
-// '' </summary>
-// '' <remarks></remarks>
-public enum ShipName
+namespace Battleship
 {
+    // '' <summary>
+    // '' The names of all of the ships in the gam
+    // '' </summary>
+    // '' <remarks></remarks>
+    public enum ShipName
+    {
 
-    None = 0,
+        None = 0,
 
-    Tug = 1,
+        Tug = 1,
 
-    Submarine = 2,
+        Submarine = 2,
 
-    Destroyer = 3,
+        Destroyer = 3,
 
-    Battleship = 4,
+        Battleship = 4,
 
-    AircraftCarrier = 5,
+        AircraftCarrier = 5,
+    }
 }

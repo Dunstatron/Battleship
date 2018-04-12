@@ -16,15 +16,15 @@ namespace Battleship
             GameResources.LoadResources();
             SwinGame.PlayMusic(GameResources.GameMusic("Background"));
             // Game Loop
-            while ((((SwinGame.WindowCloseRequested() == true) || (GameResources.CurrentState == GameState.Quitting)) == false))
+            do
             {
-                HandleUserInput();
-                DrawScreen();
-            }
+                GameController.HandleUserInput();
+                GameController.DrawScreen();
+            } while (!((SwinGame.WindowCloseRequested() == true) || (GameController.CurrentState == GameState.Quitting)));
 
-            SwinGame.StopMusic();
+                SwinGame.StopMusic();
             // Free Resources and Close Audio, to end the program.
-            FreeResources();
+            GameResources.FreeResources();
         }
     }
 }

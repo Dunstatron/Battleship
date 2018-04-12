@@ -190,7 +190,6 @@ namespace Battleship
                     break;
                 case ResultOfAttack.ShotAlready:
                     throw new ApplicationException("Error in AI");
-                    break;
             }
             if ((_Targets.Count == 0))
             {

@@ -1,31 +1,34 @@
-// '' <summary>
-// '' The result of an attack.
-// '' </summary>
-public enum ResultOfAttack
+namespace Battleship
 {
-
     // '' <summary>
-    // '' The player hit something
+    // '' The result of an attack.
     // '' </summary>
-    Hit,
+    public enum ResultOfAttack
+    {
 
-    // '' <summary>
-    // '' The player missed
-    // '' </summary>
-    Miss,
+        // '' <summary>
+        // '' The player hit something
+        // '' </summary>
+        Hit,
 
-    // '' <summary>
-    // '' The player destroyed a ship
-    // '' </summary>
-    Destroyed,
+        // '' <summary>
+        // '' The player missed
+        // '' </summary>
+        Miss,
 
-    // '' <summary>
-    // '' That location was already shot.
-    // '' </summary>
-    ShotAlready,
+        // '' <summary>
+        // '' The player destroyed a ship
+        // '' </summary>
+        Destroyed,
 
-    // '' <summary>
-    // '' The player killed all of the opponents ships
-    // '' </summary>
-    GameOver,
+        // '' <summary>
+        // '' That location was already shot.
+        // '' </summary>
+        ShotAlready,
+
+        // '' <summary>
+        // '' The player killed all of the opponents ships
+        // '' </summary>
+        GameOver,
+    }
 }
