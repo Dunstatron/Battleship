@@ -36,7 +36,7 @@ namespace Battleship
 
         private const int TEXT_OFFSET = 5;
 
-        private Direction _currentDirection = Direction.UpDown;
+        private static Direction _currentDirection = Direction.UpDown;
 
         private ShipName _selectedShip = ShipName.Tug;
 
@@ -52,7 +52,7 @@ namespace Battleship
         {
             if (SwinGame.KeyTyped(KeyCode.EscapeKey))
             {
-                AddNewState(GameState.ViewingGameMenu);
+                GameController.AddNewState(GameState.ViewingGameMenu);
             }
 
             if ((SwinGame.KeyTyped(KeyCode.UpKey) || SwinGame.KeyTyped(KeyCode.DownKey)))

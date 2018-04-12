@@ -44,11 +44,11 @@ namespace Battleship
 
         private static Color LARGE_HIT = SwinGame.RGBAColor(252, 2, 3, 255);
 
-        private Color OUTLINE_COLOR = SwinGame.RGBAColor(5, 55, 88, 255);
+        private static Color OUTLINE_COLOR = SwinGame.RGBAColor(5, 55, 88, 255);
 
-        private Color SHIP_FILL_COLOR = Color.Gray;
+        private static Color SHIP_FILL_COLOR = Color.Gray;
 
-        private Color SHIP_OUTLINE_COLOR = Color.White;
+        private static Color SHIP_OUTLINE_COLOR = Color.White;
 
         private static Color MESSAGE_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
 
@@ -145,7 +145,7 @@ namespace Battleship
                     colLeft = (left
                                 + ((cellGap + cellWidth)
                                 * col));
-                    Color fillColor;
+                    Color fillColor = Color.Gold;
                     bool draw;
                     draw = true;
                     switch (grid.Item(row, col))
@@ -248,7 +248,7 @@ namespace Battleship
 
                 if (!small)
                 {
-                    SwinGame.DrawBitmap(GameImage(shipName), colLeft, rowTop);
+                    SwinGame.DrawBitmap(GameResources.GameImage(shipName), colLeft, rowTop);
                 }
                 else
                 {
@@ -260,7 +260,7 @@ namespace Battleship
 
         }
 
-        private string _message;
+        private static string _message;
 
         // '' <summary>
         // '' The message to display
@@ -281,7 +281,7 @@ namespace Battleship
 
         public static void DrawMessage()
         {
-            SwinGame.DrawText(Message, MESSAGE_COLOR, GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
+            SwinGame.DrawText(Message, MESSAGE_COLOR, GameResources.GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
         }
 
         // '' <summary>
@@ -289,20 +289,20 @@ namespace Battleship
         // '' </summary>
         public static void DrawBackground()
         {
-            switch (CurrentState)
+            switch (GameController.CurrentState)
             {
                 case GameState.ViewingMainMenu:
                 case GameState.ViewingGameMenu:
                 case GameState.AlteringSettings:
                 case GameState.ViewingHighScores:
-                    SwinGame.DrawBitmap(GameImage("Menu"), 0, 0);
+                    SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
                     break;
                 case GameState.Discovering:
                 case GameState.EndingGame:
-                    SwinGame.DrawBitmap(GameImage("Discovery"), 0, 0);
+                    SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
                     break;
                 case GameState.Deploying:
-                    SwinGame.DrawBitmap(GameImage("Deploy"), 0, 0);
+                    SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
                     break;
                 default:
                     SwinGame.ClearScreen();
@@ -321,13 +321,13 @@ namespace Battleship
             UtilityFunctions.AddAnimation(row, col, "Splash");
         }
 
-        private List<Sprite> _Animations = new List<Sprite>();
+        private static List<Sprite> _Animations = new List<Sprite>();
 
         private static void AddAnimation(int row, int col, string image)
         {
             Sprite s;
             Bitmap imgObj;
-            imgObj = GameImage(image);
+            imgObj = GameResources.GameImage(image);
             imgObj.SetCellDetails(40, 40, 3, 3, 7);
             AnimationScript animation;
             animation = SwinGame.LoadAnimationScript("splash.txt");
@@ -348,7 +348,7 @@ namespace Battleship
             foreach (Sprite s in _Animations)
             {
                 SwinGame.UpdateSprite(s);
-                if (s.animationHasEnded)
+                if (s.AnimationHasEnded)
                 {
                     ended.Add(s);
                 }
@@ -379,7 +379,7 @@ namespace Battleship
                         <= (ANIMATION_CELLS * FRAMES_PER_CELL)); i++)
             {
                 UtilityFunctions.UpdateAnimations();
-                DrawScreen();
+                GameController.DrawScreen();
             }
 
         }

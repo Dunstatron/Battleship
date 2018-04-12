@@ -28,7 +28,7 @@ namespace Battleship
         // '' </summary>
         // '' <value>The current state</value>
         // '' <returns>The current state</returns>
-        public GameState CurrentState
+        public static GameState CurrentState
         {
             get
             {
