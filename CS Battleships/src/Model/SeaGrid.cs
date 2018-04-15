@@ -19,8 +19,8 @@ namespace Battleship
 
         private const int _HEIGHT = 10;
 
-        private Tile[,] _GameTiles = new Tile[_WIDTH - 1, _HEIGHT - 1];
-    
+        private Tile[,] _GameTiles = new Tile[_WIDTH, _HEIGHT];
+
         private Dictionary<ShipName, Ship> _Ships;
 
         private int _ShipsKilled = 0;
@@ -168,7 +168,10 @@ namespace Battleship
             }
             finally
             {
-                Changed(this, EventArgs.Empty);
+                if (Changed != null)
+                {
+                    Changed(this, EventArgs.Empty);
+                }
             }
 
         }

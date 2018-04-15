@@ -14,9 +14,9 @@ namespace Battleship
 
         protected static Random _Random = new Random();
 
-        private static Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
+        private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
 
-        private SeaGrid _playerGrid = new SeaGrid(_Ships);
+        private SeaGrid _playerGrid;
 
         private ISeaGrid _enemyGrid;
 
@@ -56,6 +56,7 @@ namespace Battleship
         public Player(BattleShipsGame controller)
         {
             _game = controller;
+            _playerGrid = new SeaGrid(_Ships);
             // for each ship add the ships name so the seagrid knows about them
             foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
             {
@@ -222,14 +223,14 @@ namespace Battleship
 
         public virtual void RandomizeDeployment()
         {
-            bool placementSuccessful;
-            Direction heading;
+            bool placementSuccessful = false;
+            Direction heading = default(Direction);
             // for each ship to deploy in shipist
             foreach (ShipName shipToPlace in Enum.GetValues(typeof(ShipName)))
             {
                 if ((shipToPlace == ShipName.None))
                 {
-                    // TODO: Continue For... Warning!!! not translated
+                    continue;
                 }
 
                 placementSuccessful = false;

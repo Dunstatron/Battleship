@@ -76,10 +76,11 @@ namespace Battleship
             /// <param name="location1">location 1</param>
             /// <param name="location2">locatoin 2</param>
             /// <returns>true if location 1 and 2 are equal</returns>
-            public static bool operator ==(Location location1, Location location2)
+            // public static bool operator ==(Location location1, Location location2)
+            public static bool operator ==(Location @this, Location other)
             {
-                return ((location1 != null) && (location2 != null) && (location1.Row == location2.Row)
-                    && (location1.Column == location2.Column));
+                // return ((location1 != null) && (location2 != null) && (location1.Row == location2.Row) && (location1.Column == location2.Column));
+                return !ReferenceEquals(@this, null) && !ReferenceEquals(other, null) && ReferenceEquals(@this.Row, other.Row) && ReferenceEquals(@this.Column, other.Column);
             }
 
             /// <summary>
@@ -88,10 +89,11 @@ namespace Battleship
             /// <param name="location1">location 1</param>
             /// <param name="location2">location 2</param>
             /// <returns>true if locations are not equal</returns>
-            public static bool operator !=(Location location1, Location location2)
+            //public static bool operator !=(Location location1, Location location2)
+            public static bool operator !=(Location @this, Location other)
             {
-                return ((location1 == null) || (location2 == null) || (location1.Row != location2.Row)
-                    || (location1.Column != location2.Column));
+                //return ((location1 == null) || (location2 == null) || (location1.Row != location2.Row) || (location1.Column != location2.Column));
+                return !ReferenceEquals(@this, null) || !ReferenceEquals(other, null) || ReferenceEquals(@this.Row, other.Row) || ReferenceEquals(@this.Column, other.Column);
             }
         }
 

@@ -10,7 +10,7 @@ namespace Battleship
         {
             GameResources.NewFont("ArialLarge", "arial.ttf", 80);
             GameResources.NewFont("Courier", "cour.ttf", 14);
-            GameResources.NewFont("CourierSmall", "cour.attf", 8);
+            GameResources.NewFont("CourierSmall", "cour.ttf", 8);
             GameResources.NewFont("Menu", "ffaccess.ttf", 8);
         }
 
@@ -54,7 +54,7 @@ namespace Battleship
 
         private static void LoadMusic()
         {
-            GameResources.NewMusic("Background", "horrordrone.mp3");
+            GameResources.NewMusic("Background", "horrordrone.wav");
         }
 
         // '' <summary>

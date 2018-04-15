@@ -149,7 +149,7 @@ namespace Battleship
         // '' <param name="column">column generated around the hit tile</param>
         private void TargetCoords(ref int row, ref int column)
         {
-            Target t;
+            Target t = null;
             t = _Targets.Pop();
             row = t.ShotAt.Row;
             column = t.ShotAt.Column;

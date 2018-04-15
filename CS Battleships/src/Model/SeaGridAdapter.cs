@@ -24,7 +24,10 @@ namespace Battleship
         // '' <param name="e">what needs to be redrawn</param>
         private void MyGrid_Changed(object sender, EventArgs e)
         {
-            Changed(this, e);
+            if (Changed != null)
+            {
+                Changed(this, e);
+            }
         }
 
         // '' <summary>
