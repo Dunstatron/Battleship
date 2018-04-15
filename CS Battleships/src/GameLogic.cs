@@ -4,7 +4,7 @@ using static SwinGameSDK.SwinGame;
 
 namespace Battleship
 {
-    class GameLogic
+    static class GameLogic
     {
 
         public static void Main()

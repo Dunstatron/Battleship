@@ -214,7 +214,7 @@ namespace Battleship
             SwinGame.FreeBitmap(_Animation);
             SwinGame.FreeBitmap(_LoaderEmpty);
             SwinGame.FreeBitmap(_LoaderFull);
-            Audio.FreeSoundEffect(_StartSound);
+            // SwinGame.FreeSoundEffect(_StartSound);
             SwinGame.ChangeScreenSize(width, height);
         }
 
@@ -248,48 +248,49 @@ namespace Battleship
             _Music.Add(musicName, Audio.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
         }
 
-        private static void FreeFonts()
-        {
-            foreach (Font obj in _Fonts.Values)
-            {
-                SwinGame.FreeFont(obj);
-            }
+        //private static void FreeFonts()
+        //{
+        //    foreach (Font obj in _Fonts.Values)
+        //    {
+        //        SwinGame.FreeFont(obj);
+        //    }
 
-        }
+        //}
 
-        private static void FreeImages()
-        {
-            foreach (Bitmap obj in _Images.Values)
-            {
-                SwinGame.FreeBitmap(obj);
-            }
+        //private static void FreeImages()
+        //{
+        //    foreach (Bitmap obj in _Images.Values)
+        //    {
+        //        SwinGame.FreeBitmap(obj);
+        //    }
 
-        }
+        //}
 
-        private static void FreeSounds()
-        {
-            foreach (SoundEffect obj in _Sounds.Values)
-            {
-                Audio.FreeSoundEffect(obj);
-            }
+        //private static void FreeSounds()
+        //{
+        //    foreach (SoundEffect obj in _Sounds.Values)
+        //    {
+        //        Audio.FreeSoundEffect(obj);
+        //    }
 
-        }
+        //}
 
-        private static void FreeMusic()
-        {
-            foreach (Music obj in _Music.Values)
-            {
-                Audio.FreeMusic(obj);
-            }
+        //private static void FreeMusic()
+        //{
+        //    foreach (Music obj in _Music.Values)
+        //    {
+        //        Audio.FreeMusic(obj);
+        //    }
 
-        }
+        //}
 
         public static void FreeResources()
         {
-            GameResources.FreeFonts();
-            GameResources.FreeImages();
-            GameResources.FreeMusic();
-            GameResources.FreeSounds();
+            //GameResources.FreeFonts();
+            //GameResources.FreeImages();
+            //GameResources.FreeMusic();
+            //GameResources.FreeSounds();
+            SwinGame.ReleaseAllResources();
             SwinGame.ProcessEvents();
         }
     }

@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGameWin", "MyGameWin.csproj", "{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}"
 EndProject
 Global
@@ -10,6 +12,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}.Debug-Windows|x86.ActiveCfg = Debug-Windows|x86
 		{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}.Debug-Windows|x86.Build.0 = Debug-Windows|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48E4FE49-BD50-4BC7-8810-EB5449DF0BE6}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
