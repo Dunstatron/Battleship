@@ -46,6 +46,9 @@ namespace Battleship
             }
         }
 
+        /// <summary>
+        /// Return the ship on this tile, set a ship to this tile, and this tile to the ship
+        /// </summary>
         public Ship Ship
         {
             get
