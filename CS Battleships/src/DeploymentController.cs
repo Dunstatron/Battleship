@@ -90,7 +90,7 @@ namespace Battleship
                 }
                 else if (SwinGame.PointInRect(SwinGame.MousePosition(), UP_DOWN_BUTTON_LEFT, TOP_BUTTONS_TOP, DIR_BUTTONS_WIDTH, TOP_BUTTONS_HEIGHT))
                 {
-                    _currentDirection = Direction.LeftRight;
+                    _currentDirection = Direction.UpDown;
                 }
                 else if (SwinGame.PointInRect(SwinGame.MousePosition(), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP, DIR_BUTTONS_WIDTH, TOP_BUTTONS_HEIGHT))
                 {
@@ -120,8 +120,8 @@ namespace Battleship
             // Calculate the row/col clicked
             int row;
             int col;
-            row = Convert.ToInt32(Math.Floor((mouse.Y
-                                / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP))));
+            row = Convert.ToInt32(Math.Floor((mouse.Y - UtilityFunctions.FIELD_TOP)
+                                / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
             col = Convert.ToInt32(Math.Floor(((mouse.X - UtilityFunctions.FIELD_LEFT)
                                 / (UtilityFunctions.CELL_WIDTH + UtilityFunctions.CELL_GAP))));
             if (((row >= 0)
