@@ -84,7 +84,7 @@ namespace Battleship
                     _ai = new AIHardPlayer(_theGame);
                     break;
                 default:
-                    _ai = new AIHardPlayer(_theGame);
+                    _ai = new AIEasyPlayer(_theGame);
                     break;
             }
             _human = new Player(_theGame);
