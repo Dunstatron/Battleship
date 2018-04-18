@@ -204,8 +204,7 @@ namespace Battleship
         // '' <param name="col">the column to attack</param>
         // '' <returns>the result of the attack</returns>
         internal AttackResult Shoot(int row, int col)
-        {
-            _shots++;
+        { 
             AttackResult result;
             result = EnemyGrid.HitTile(row, col);
             switch (result.Value)
@@ -213,9 +212,11 @@ namespace Battleship
                 case ResultOfAttack.Destroyed:
                 case ResultOfAttack.Hit:
                     _hits++;
+                    _shots++;
                     break;
                 case ResultOfAttack.Miss:
                     _misses++;
+                    _shots++;
                     break;
             }
             return result;
