@@ -315,7 +315,7 @@ namespace Battleship
         {
             UtilityFunctions.AddAnimation(row, col, "Splash");
         }
-
+        
         public static void AddSplash(int row, int col)
         {
             UtilityFunctions.AddAnimation(row, col, "Splash");
