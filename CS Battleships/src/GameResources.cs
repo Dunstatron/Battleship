@@ -8,10 +8,14 @@ namespace Battleship
 
         private static void LoadFonts()
         {
-            GameResources.NewFont("ArialLarge", "arial.ttf", 80);
-            GameResources.NewFont("Courier", "cour.ttf", 14);
-            GameResources.NewFont("CourierSmall", "cour.ttf", 8);
-            GameResources.NewFont("Menu", "ffaccess.ttf", 8);
+            //GameResources.NewFont("ArialLarge", "arial.ttf", 80);
+            //GameResources.NewFont("Courier", "cour.ttf", 14);
+            //GameResources.NewFont("CourierSmall", "cour.ttf", 8);
+            //GameResources.NewFont("Menu", "ffaccess.ttf", 8);
+            GameResources.NewFont("ArialLarge", "coalition.ttf", 80);
+            GameResources.NewFont("Courier", "coalition.ttf", 14);
+            GameResources.NewFont("CourierSmall", "coalition.ttf", 8);
+            GameResources.NewFont("Menu", "coalition.ttf", 8);
         }
 
         private static void LoadImages()
