@@ -5,7 +5,7 @@ SwinGame Animation #v1
 //
 
 // frames 0 to 6, play for 10 frames each
-f:[0-3],[0-3],4,
+f:[0-1],[0-1],2,
 
 //Animation identifiers.
 //
