@@ -153,3 +153,4 @@ B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windo
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.exe
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.pdb
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\images\discover2.jpg

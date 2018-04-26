@@ -136,7 +136,7 @@ namespace Battleship
         private void Delay()
         {
             int i;
-            for (i = 0; i < 150; i++)
+            for (i = 0; i < 50; i++)
             {
                 //Don't delay if window is closed
                 if (SwinGame.WindowCloseRequested()) return;

@@ -65,6 +65,7 @@ namespace Battleship
             const int SHOTS_TOP = 157;
             const int HITS_TOP = 206;
             const int SPLASH_TOP = 256;
+            const int RATIO_TOP = 303;
             if (((SwinGame.KeyDown(KeyCode.LeftShiftKey) || SwinGame.KeyDown(KeyCode.RightShiftKey))
                         && SwinGame.KeyDown(KeyCode.CKey)))
             {
@@ -80,6 +81,14 @@ namespace Battleship
             SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
             SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
             SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+            if (GameController.HumanPlayer.Shots != 0)
+            {
+                SwinGame.DrawText((Math.Round(((double)GameController.HumanPlayer.Hits / (double)GameController.HumanPlayer.Shots) * 100, 2)).ToString() + " %", Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, RATIO_TOP);
+            }
+            else
+            {
+                SwinGame.DrawText("N/A", Color.White, SCORES_LEFT, RATIO_TOP);
+            }
         }
     }
 }
