@@ -15,7 +15,8 @@ namespace Battleship
 
         private const int NAME_WIDTH = 3;
 
-        private const int SCORES_LEFT = 490;
+        private const int SCORES_LEFT = 140;
+
 
         // '' <summary>
         // '' The score structure is used to keep the name and
@@ -104,15 +105,15 @@ namespace Battleship
         // '' </summary>
         public static void DrawHighScores()
         {
-            const int SCORES_HEADING = 40;
-            const int SCORES_TOP = 80;
+            const int SCORES_HEADING = 200;
+            const int SCORES_TOP = 250;
             const int SCORE_GAP = 30;
             if ((_Scores.Count == 0))
             {
                 HighScoreController.LoadScores();
             }
 
-            SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
+            SwinGame.DrawText("   High Scores   ", Color.Black, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
             // For all of the scores
             int i;
             for (i = 0; (i
@@ -125,13 +126,13 @@ namespace Battleship
                 {
                     SwinGame.DrawText((" "
                                     + ((i + 1) + (":   "
-                                    + (s.Name + ("   " + s.Value))))), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, (SCORES_TOP
+                                    + (s.Name + ("   " + s.Value))))), Color.Black, GameResources.GameFont("Courier"), SCORES_LEFT, (SCORES_TOP
                                     + (i * SCORE_GAP)));
                 }
                 else
                 {
                     SwinGame.DrawText(((i + 1) + (":   "
-                                    + (s.Name + ("   " + s.Value)))), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, (SCORES_TOP
+                                    + (s.Name + ("   " + s.Value)))), Color.Black, GameResources.GameFont("Courier"), SCORES_LEFT, (SCORES_TOP
                                     + (i * SCORE_GAP)));
                 }
 
@@ -162,7 +163,7 @@ namespace Battleship
         // '' </remarks>
         public static void ReadHighScore(int value)
         {
-            const int ENTRY_TOP = 500;
+            const int ENTRY_TOP = 550;
             if ((_Scores.Count == 0))
             {
                 HighScoreController.LoadScores();
@@ -176,14 +177,14 @@ namespace Battleship
                 GameController.AddNewState(GameState.ViewingHighScores);
                 int x;
                 x = (SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Courier"), "Name: "));
-                SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Courier"), x, ENTRY_TOP);
+                SwinGame.StartReadingText(Color.Black, NAME_WIDTH, GameResources.GameFont("Courier"), x, ENTRY_TOP);
                 // Read the text from the user
                 while (SwinGame.ReadingText())
                 {
                     SwinGame.ProcessEvents();
                     UtilityFunctions.DrawBackground();
                     HighScoreController.DrawHighScores();
-                    SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
+                    SwinGame.DrawText("Name: ", Color.Black, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
                     SwinGame.RefreshScreen();
                 }
 

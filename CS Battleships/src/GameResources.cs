@@ -13,15 +13,16 @@ namespace Battleship
             //GameResources.NewFont("CourierSmall", "cour.ttf", 8);
             //GameResources.NewFont("Menu", "ffaccess.ttf", 8);
             GameResources.NewFont("ArialLarge", "coalition.ttf", 80);
-            GameResources.NewFont("Courier", "coalition.ttf", 14);
+            GameResources.NewFont("Courier", "coalition.ttf", 12);
             GameResources.NewFont("CourierSmall", "coalition.ttf", 8);
-            GameResources.NewFont("Menu", "coalition.ttf", 8);
+            GameResources.NewFont("Menu", "cour.ttf", 30);
+            GameResources.NewFont("Ingame_Menu", "coalition.ttf", 12);
         }
 
         private static void LoadImages()
         {
             // Backgrounds
-            GameResources.NewImage("Menu", "main_page.jpg");
+            GameResources.NewImage("Menu", "main_page_new.jpg");
             GameResources.NewImage("Discovery", "discover.jpg");
             GameResources.NewImage("Deploy", "deploy.jpg");
             // Deployment
