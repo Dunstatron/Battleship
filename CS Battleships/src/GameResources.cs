@@ -59,7 +59,7 @@ namespace Battleship
 
         private static void LoadMusic()
         {
-            GameResources.NewMusic("Background", "horrordrone.wav");
+            GameResources.NewMusic("Background", "bensound-instinct.wav");
         }
 
         // '' <summary>

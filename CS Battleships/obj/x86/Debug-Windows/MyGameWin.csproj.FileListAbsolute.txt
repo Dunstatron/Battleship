@@ -153,14 +153,21 @@ B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windo
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.exe
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.pdb
+<<<<<<< HEAD
 D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\images\discover2.jpg
 D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\fonts\coalition.ttf
 D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\images\main_page_new.jpg
+=======
+C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\animations\splash.txt
+>>>>>>> rorys_addons
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\animations\startup.txt
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\bundles\FileDialog.txt
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\bundles\splash.txt
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\fonts\arial.ttf
+<<<<<<< HEAD
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\fonts\coalition.ttf
+=======
+>>>>>>> rorys_addons
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\fonts\cour.ttf
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\fonts\ffaccess.ttf
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\fonts\maven_pro_regular.ttf
@@ -172,7 +179,10 @@ C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\deploy_play_button.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\deploy_randomize_button.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\discover.jpg
+<<<<<<< HEAD
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\discover2.jpg
+=======
+>>>>>>> rorys_addons
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\explosion.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\fdFile.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\fdFolder.png
@@ -184,7 +194,10 @@ C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\loader_empty.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\loader_full.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\main_page.jpg
+<<<<<<< HEAD
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\main_page_new.jpg
+=======
+>>>>>>> rorys_addons
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\ship_deploy_horiz_1.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\ship_deploy_horiz_2.png
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\images\ship_deploy_horiz_3.png
@@ -212,7 +225,10 @@ C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\winner.wav
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\SwinGame.icns
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\SwinGame.ico
+<<<<<<< HEAD
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\animations\splash.txt
+=======
+>>>>>>> rorys_addons
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\MyGame.exe.config
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\MyGame.exe
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\MyGame.pdb
@@ -221,3 +237,10 @@ C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.pdb
+<<<<<<< HEAD
+=======
+C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\oldmiss.wav
+C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\badhorrordrone.mp3
+C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.mp3
+C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.wav
+>>>>>>> rorys_addons
