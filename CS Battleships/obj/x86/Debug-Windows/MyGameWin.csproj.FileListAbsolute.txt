@@ -154,3 +154,5 @@ B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windo
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.exe
 B:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\obj\x86\Debug-Windows\MyGame.pdb
 D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\images\discover2.jpg
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\fonts\coalition.ttf
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\images\main_page_new.jpg
