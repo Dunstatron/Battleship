@@ -11,15 +11,15 @@ namespace Battleship
 
         private static string[][] _menuStructure = { new string[]{ "PLAY", "SETUP", "SCORES", "QUIT" }, new string[]{ "RETURN", "SURRENDER", "QUIT" }, new string[]{ "EASY", "MEDIUM", "HARD" } };
 
-        private const int MENU_TOP = 575;
+        private const int MENU_TOP = 560;
 
         private const int MENU_LEFT = 30;
 
-        private const int MENU_GAP = 0;
+        private const int MENU_GAP = 15;
 
-        private const int BUTTON_WIDTH = 75;
+        private const int BUTTON_WIDTH = 110;
 
-        private const int BUTTON_HEIGHT = 15;
+        private const int BUTTON_HEIGHT = 30;
 
         private const int BUTTON_SEP = (BUTTON_WIDTH + MENU_GAP);
 
@@ -53,9 +53,9 @@ namespace Battleship
 
         private const int GAME_MENU_QUIT_BUTTON = 2;
 
-        private static Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
+        private static Color MENU_COLOR = SwinGame.RGBAColor(255, 255, 255, 255);
 
-        private static Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
+        private static Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(0, 0, 0, 255);
 
         // '' <summary>
         // '' Handles the processing of user input when the main menu is showing
@@ -200,7 +200,7 @@ namespace Battleship
                 toDraw.Y = (btnTop + TEXT_OFFSET);
                 toDraw.Width = BUTTON_WIDTH;
                 toDraw.Height = BUTTON_HEIGHT;
-                SwinGame.DrawText(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, toDraw);
+                SwinGame.DrawText(_menuStructure[menu][i], MENU_COLOR, SwinGame.RGBColor(86,111,131), GameResources.GameFont("Menu"), FontAlignment.AlignCenter, toDraw);
                 if ((SwinGame.MouseDown(MouseButton.LeftButton) && MenuController.IsMouseOverMenu(i, level, xOffset)))
                 {
                     SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
