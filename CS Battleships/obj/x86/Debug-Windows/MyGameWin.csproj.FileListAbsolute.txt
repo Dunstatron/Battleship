@@ -228,3 +228,7 @@ C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\badhorrordrone.mp3
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.mp3
 C:\Users\rorya\OneDrive\Documents\Swinburne\Dev Tools\Battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.wav
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\sounds\badhorrordrone.mp3
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.mp3
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\sounds\bensound-instinct.wav
+D:\2018\DP1_SWE20001\BattleShipGit\battleship\CS Battleships\bin\Debug\Resources\sounds\oldmiss.wav
